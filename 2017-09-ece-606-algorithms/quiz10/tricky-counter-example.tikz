@@ -1,0 +1,31 @@
+\usetikzlibrary{calc}
+\begin{tikzpicture}
+\tikzstyle{circ} = [draw, circle];
+\node[circ] (v1) at (0,0) {\Large 1};
+\node[circ] (v2) at (-1,-2) {\Large 2};
+\node[circ] (v4) at (1,-2) {\Large 3};
+\node[circ] (v3) at (-1,-4) {\Large 4};
+\draw  (v1) edge (v2);
+\draw  (v3) edge (v2);
+\draw  (v1) edge (v4);
+
+\node[circ] (v5) at (6,0) {\Large a};
+\node[circ] (v6) at (5,-2) {\Large b};
+\node[circ] (v7) at (7,-2) {\Large c};
+\node[circ] (v8) at (5,-4) {\Large d};
+\draw  (v6) edge (v5);
+\draw  (v5) edge (v7);
+\draw  (v7) edge (v6);
+\node[anchor=north] at (3,0) {\Large 
+\begin{tabular}{l}
+T[1] $\rightarrow$ a \\
+T[2] $\rightarrow$ b \\
+T[3] $\rightarrow$ c \\
+T[4] $\rightarrow$ c \\
+\end{tabular}};
+\draw  (-1.5,1.5) rectangle (1.5,-4.5);
+
+\node at (0,1) {\Large G1};
+\draw  (4.5,1.5) rectangle (7.5,-4.5);
+\node at (6,1) {\Large G2};
+\end{tikzpicture}
